@@ -24,7 +24,47 @@ public class EmployeeDaoimpl  implements EmployeeDao{
 		
 		return employees;
 	}
-
+//	@Override
+//	public Employee getEmployee(int id) {
+//		// TODO Auto-generated method stub
+//		for(Employee emp:employees)
+//		{
+//			if(emp.getId()==id) 
+//				return emp;
+//			
+//		}
+//		return null;
+//	
+//	}
+	@Override
+	public Employee getEmployee(int id) {
+		// TODO Auto-generated method stub
+		
+		for(Employee emp:employees) {
+			if(emp.getId()==id)
+				return emp;
+		}
+		return null;
+	}
+	@Override
+	public int deleteEmployee(int id) {
+		// TODO Auto-generated method stub
+		Employee empToDelete =null;
+		for(Employee emp:employees) {
+			if(emp.getId()==id)
+				empToDelete=emp;
+				
+		}
+		if(empToDelete !=null)
+		{
+			employees.remove(empToDelete);
+			return 1;
+		}
+		else {
+			return 0;
+		}
+		
+	}
 	
 	
 }

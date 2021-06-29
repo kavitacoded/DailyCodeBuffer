@@ -21,4 +21,12 @@ public class EmployeeService {
 	public List<Employee> getAllEmployee(){
 		return empdao.getAllEmloyees();
 	}
+	
+	public Employee getEmployee(int id) {
+		return empdao.getEmployee(id);
+	}
+	
+	public int deleteEmployee(int id) {
+		return empdao.deleteEmployee(id);
+	}
 }
